@@ -11,7 +11,6 @@ public class Ex2 {
 		System.out.println("b : " + b);
 		System.out.println("a1 : " + a1);
 		System.out.println("b1 : " + b1);
-		
 	}
 
 }

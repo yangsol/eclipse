@@ -1,8 +1,17 @@
 package ch04;
 
-import java.awt.*;
-import java.awt.event.*;
-import java.util.*;
+import java.awt.BorderLayout;
+import java.awt.Button;
+import java.awt.Color;
+import java.awt.Font;
+import java.awt.Frame;
+import java.awt.Graphics;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
+import java.util.Arrays;
+import java.util.Random;
 
 
 public class LottoFrame extends Frame 
@@ -48,22 +57,23 @@ implements ActionListener{
 		repaint();
 	}
 
-	public static int[] getLotto() { // 함수 선언
+	public int[] getLotto(){
 		int lotto[] = new int[6];
-		
-		boolean isNumThere = false; //변수 선언
-		
-		for (int i=0; i<lotto.length; i++) {
+		//배열 밑에 항상 for문 있다.
+		//중복로직 추가
+		boolean isNumThere = false;
+		for (int i = 0; i < lotto.length; i++) {
 			isNumThere = false;
 			lotto[i] = (int)(Math.random()*45)+1;
-			for (int j=0; j<i; j++) {
-				if(lotto[i] == lotto[j]) {
+			for (int j = 0; j < i; j++) {
+				if(lotto[i]==lotto[j]) {
 					isNumThere = true;
 				}
 			}
-			if(isNumThere) i--;
+			if(isNumThere)
+				i--;
 		}
-		Arrays.sort(lotto); //오름차순 정렬
+		Arrays.sort(lotto);//올럼차순 정렬
 		return lotto;
 	}
 }

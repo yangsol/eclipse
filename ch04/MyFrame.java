@@ -1,7 +1,5 @@
 package ch04;
 
-import java.awt.*;
-import java.awt.event.*;		//밑에꺼 다들고옴
 import java.awt.Button;
 import java.awt.Color;
 import java.awt.Frame;
@@ -26,15 +24,17 @@ public class MyFrame extends Frame{
 	}
 
 	public Color setColor() {
-		int r =(int) (Math.random()*256);
-		int g =(int) (Math.random()*256);
-		int b =(int) (Math.random()*256);
-		return new Color(r,g,b);
+		int r = (int)(Math.random()*256);
+		int g = (int)(Math.random()*256);
+		int b = (int)(Math.random()*256);
+		return new Color(r, g, b);
 	}
 	
 	public static void main(String[] args) {
 		new MyFrame();
-
 	}
-
 }
+
+
+
+

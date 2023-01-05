@@ -1,0 +1,12 @@
+1/4
+1.객체지향
+ - 클래스, 필드, 메소드, 객체
+ - Module java.base -> Package java.lang -> String
+ - 메서드 형태
+ - 메서드 오버라이딩
+ - 가변인수
+
+2.생성자
+ - 상속
+ - package
+ - this, super (둘다 예약어)
